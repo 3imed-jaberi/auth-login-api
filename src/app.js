@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const logger = require('morgan');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const passport = require ('passport');
 
@@ -29,6 +30,8 @@ mongoose.connection.on('error',(err)=>{
 
 // Middlewares ...
 app.use(logger('dev'));
+
+app.use(helmet());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : true}));
