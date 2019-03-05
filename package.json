@@ -1,0 +1,43 @@
+{
+  "name": "auth-login-api",
+  "version": "1.0.0",
+  "description": "login api with authentication via JWT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --exec node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3imed-jaberi/auth-login-api.git"
+  },
+  "keywords": [
+    "login",
+    "rest-api",
+    "api",
+    "jsonwebtoken",
+    "jwt",
+    "nodejs",
+    "auth"
+  ],
+  "author": "imed jaberi",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.17",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "bugs": {
+    "url": "https://github.com/3imed-jaberi/auth-login-api/issues"
+  },
+  "homepage": "https://github.com/3imed-jaberi/auth-login-api#readme"
+}
