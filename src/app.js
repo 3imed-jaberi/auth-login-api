@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const passport = require ('passport');
 
+
 // The first version of the route ..
 const v1 = require('./routes/v1');
 
@@ -15,15 +16,16 @@ mongoose.connect(
   process.env.MONGODB_URL,
   {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
   }
 );
 
-mongoose.connection.on('connected',()=>{
+mongoose.connection.on('connected', () => {
   console.log('Connected to the database ..');
 });
 
-mongoose.connection.on('error',(err)=>{
+mongoose.connection.on('error', err => {
   console.error(`Field to connected to database: ${err}`);
 });
 
@@ -41,24 +43,24 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 // Routes ...
-app.use('/api/v1',v1);
+app.use('/api/v1', v1);
 
 
 // Errors ...
 
 // 404 Not Found .. 
-app.use((req,res,next) => {
+app.use((req, res, next) => {
   var err = new Error('Not Found Directory');
   err.status = 404;
   next(err);
 });
 
 // errors handling ..
-app.use((err,req,res,next) => {
+app.use((err, req, res, next) => {
   const status = err.status || 500 ;
   const error = err.message || 'Error processing your request' ;
 
-  res.status(status).json({error});
+  res.status(status).json({ error });
 });
 
 
