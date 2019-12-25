@@ -1,7 +1,7 @@
 {
   "name": "auth-login-api",
   "version": "1.0.0",
-  "description": "login api with authentication via JWT",
+  "description": " Login nodejs (express) API with authentication via JWT & Passport ❄️ .. ",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -20,18 +20,21 @@
     "nodejs",
     "auth"
   ],
-  "author": "imed jaberi",
+  "author": {
+    "name": "imed jaberi",
+    "email": "3imed.jaberi@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "helmet": "^3.15.1",
-    "jsonwebtoken": "^8.5.0",
-    "mongoose": "^5.4.17",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.3",
     "morgan": "^1.9.1",
-    "passport": "^0.4.0",
+    "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
